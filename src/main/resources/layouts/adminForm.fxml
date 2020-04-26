@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kg.megacom.okhttptest.controllers.adminForms.AdminFormController">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="Редактировать">
+                    <items>
+                        <MenuItem fx:id="mnItemCreateLot" mnemonicParsing="false" onAction="#onMnClicked" text="Добавить лот" />
+                  <MenuItem fx:id="mnItmEdit" mnemonicParsing="false" onAction="#onMnClicked" text="Редактировать" />
+                  <MenuItem fx:id="mnItmStatus" mnemonicParsing="false" onAction="#onMnClicked" text="Добавит статус" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <TableView fx:id="tbViewLot" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="colmName" prefWidth="103.0" text="Название" />
+                <TableColumn fx:id="colmMinPrice" prefWidth="108.0" text="мин. стоимость" />
+                <TableColumn fx:id="colmMaxPrice" prefWidth="112.0" text="цена на выкуп " />
+                <TableColumn fx:id="colmStartDate" prefWidth="148.0" text="дата начала" />
+                <TableColumn fx:id="colmEndDate" prefWidth="125.0" text="дата окончания " />
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>
